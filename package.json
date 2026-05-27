@@ -1,0 +1,12 @@
+{
+  "name": "mysql-workbench-stimulator-enterprise",
+  "version": "3.0.0",
+  "description": "Free static SQL workbench with enterprise-style governance features and no AI API.",
+  "scripts": {
+    "check": "node -e \"const fs=require('fs'); ['index.html','README.md','DEPLOYMENT.md'].forEach(f=>{if(!fs.existsSync(f)) throw new Error(f+' missing')}); console.log('Static checks passed')\""
+  },
+  "keywords": ["sql", "sqlite", "sqljs", "workbench", "education", "static-site", "no-ai-api"],
+  "author": "Adewale Samson Adeagbo",
+  "license": "MIT",
+  "devDependencies": {}
+}

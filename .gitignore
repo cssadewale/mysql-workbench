@@ -1,0 +1,21 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Private data and backups
+*.sqlite
+*.db
+*.csv
+!sample*.csv
+
+# Dependency folders if contributors experiment locally
+node_modules/
+.env
+.env.*
