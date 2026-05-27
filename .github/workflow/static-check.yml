@@ -1,0 +1,22 @@
+name: Static Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate required files
+        run: |
+          test -f index.html
+          test -f README.md
+          test -f DEPLOYMENT.md
+          test -f docs/FEATURES.md
+          echo "Required files exist."
+      - name: Check no obvious AI API keys are committed
+        run: |
+          ! grep -R "sk-\|OPENAI_API_KEY\|GEMINI_API_KEY\|ANTHROPIC_API_KEY" -n . --exclude-dir=.git
